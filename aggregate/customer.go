@@ -30,3 +30,9 @@ func NewCustomer(name string, age int) (Customer, error) {
 		},
 	}, nil
 }
+func (c *Customer) GetID() uuid.UUID {
+	return c.Person.Id
+}
+func (c *Customer) GetName() string {
+	return c.Person.Name
+}
